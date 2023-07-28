@@ -6,7 +6,7 @@ function Header({ currentScreen }) {
     const navigation = useNavigation();
     console.log(currentScreen);
   return (
-    <Appbar.Header>
+    <Appbar.Header style={{backgroundColor: "aquamarine"}}>
         {currentScreen !== "Screen 1" && <Appbar.BackAction onPress={() => {navigation.goBack()}} />}
       <Appbar.Content title={currentScreen} />
       <Appbar.Action icon="calendar" onPress={() => {navigation.navigate("Screen 2")}} />
